@@ -1,0 +1,14 @@
+{
+  "name": "Codespaces GUI Desktop",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "postStartCommand": "/opt/vnc/start-vnc.sh",
+  "portsAttributes": {
+    "6080": {
+      "label": "Linux Desktop",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
