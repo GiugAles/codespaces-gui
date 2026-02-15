@@ -5,6 +5,7 @@
   },
   "forwardPorts": [6080],
   "postStartCommand": "/opt/vnc/start-vnc.sh",
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
   "portsAttributes": {
     "6080": {
       "label": "Linux Desktop",
