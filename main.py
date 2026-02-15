@@ -3,7 +3,9 @@ from pygame import display, font, event
 from pygame.locals import *
 
 def main():
-# Game loop
+    # Counts how many questions have been asked
+    currentQuestion = 0
+    # Game loop
     while True:
         # Checks to see if at beginning of game
         if currentQuestion == 0:
@@ -219,6 +221,4 @@ if __name__ == "__main__":
     # Directions displayed throughout game
     directions = "Please press the 'Y' key for yes and the 'N' key for no."
 
-    # Counts how many questions have been asked
-    currentQuestion = 0
     main()

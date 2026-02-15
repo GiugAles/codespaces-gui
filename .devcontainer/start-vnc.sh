@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 export DISPLAY=:1
 
@@ -7,6 +8,8 @@ Xvfb :1 -screen 0 1024x768x24 &
 export DISPLAY=:1
 fluxbox &
 
+unset WAYLAND_DISPLAY
+export XDG_SESSION_TYPE=x11
 echo "Starting VNC server..."
 x11vnc -display :1 -nopw -forever -shared -rfbport 5900 &
 
